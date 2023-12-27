@@ -1,0 +1,210 @@
+:root {
+    --colorPrimario: #fff;
+    --acento1: #49A1C7;
+    --acento2: #70C62C;
+    --acento3: #F9A01E;
+    --texto1: #f8fcff;
+    --texto2: #333;
+    --texto3: #fff5ac;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.colored-overlay {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header-wrapper {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+header nav {
+    position: fixed;
+    width: 100%;
+    padding: 1rem max(7vw, 5rem);
+    display: flex;
+    align-items: center;
+    gap: max(6vw, 5rem);
+}
+header nav, header nav * {
+    transition: all 0.3s;
+}
+header nav.scrolled {
+    background-color: #fff;
+}
+.aquamundo-nav-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+.aquamundo-nav-banner h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+nav.scrolled .aquamundo-nav-banner h2 {
+    color: #49A1C7;
+}
+.aquamundo-nav-banner h2::first-letter {
+    text-transform: lowercase;
+}
+header nav img {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+}
+
+.nav-links {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    gap: max(3.5vw, 2rem);
+}
+.nav-links a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-decoration-color: #49A1C7;
+    color: #fff;
+    transition: all 0.3s;
+}
+nav.scrolled .nav-links a {
+    color: #000;
+}
+.nav-links a:hover, nav.scrolled .nav-links a:hover {
+    color: #49A1C7;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+
+/**Burger menu*/
+:root {
+    --font-size: 1;
+    --color1: #000;
+    --borderRadius: 1em;
+}
+.dropdown-content {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    top: calc(13vh - 1px);
+    right: 8vw;
+    background-color: #fff;
+    border: 1px solid #9a9a9a;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 8px rgba(255, 255, 255, 0.1);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 2;
+}
+.dropdown-content.visible {
+    display: flex;
+}
+.dropdown-content a {
+    color: #000;
+    font-size: 1.4rem;
+    font-family: 'Inter';
+    text-decoration: none;
+    padding: 1rem 3rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.dropdown-content svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #754FE2;
+}
+.burger {
+    display: none;
+    font-size: var(--font-size);
+    cursor: pointer;
+    padding: 1.5em 0.75em;
+    transform: scale(0.7) translate(0);
+}
+.burger > div {
+    width: 3.5em;
+    height: 0.5em;
+    border-radius: var(--borderRadius);
+    background: var(--color1);
+}
+.burger > div::before, .burger > div::after {
+    transition: font-size 0s;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 3.5em;
+    height: 0.5em;
+    background: var(--color1);
+    border-radius: var(--borderRadius);
+}
+.burger > div::before {
+    margin-top: -1.5em;
+}
+.burger > div::after {
+    margin-top: 1.5em;
+}
+.burger1 {
+    transition: all 0.7s, font-size 0s;
+    transition-timing-function: cubic-bezier(0.68, -0.35, 0.265, 1.35);
+}
+.burger1 > div {
+    transition: all 0.1s 0.3s, font-size 0s;
+}
+.burger1 > div::before, .burger1 > div::after {
+    transition: all 0.3s 0.2s, font-size 0s;
+}
+.burger1.toggled {
+    transform: rotate(180deg);
+}
+.burger1.toggled > div::before {
+    transform: rotate(45deg) translate(1.1em, 1em);
+}
+.burger1.toggled > div {
+    background: transparent;
+}
+.burger1.toggled > div::after {
+    transform: rotate(-45deg) translate(1.1em, -1em);
+}
+
+@media only screen and (max-width: 900px) {
+    header nav {
+        padding: 1rem max(5vw, 2rem);
+        background-color: #fff;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav img {
+        width: 8rem;
+        height: 8rem;
+    }
+    header .nav-links {
+        display: none;
+    }
+    .aquamundo-nav-banner h2 {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}

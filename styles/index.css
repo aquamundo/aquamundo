@@ -1,0 +1,250 @@
+:root {
+    --colorPrimario: #fff;
+    --acento1: #49A1C7;
+    --acento2: #70C62C;
+    --acento3: #F9A01E;
+    --texto1: #f8fcff;
+    --texto2: #333;
+    --texto3: #fff5ac;
+}
+
+header {
+    background-image: url('../res/inicio/portada-inicio.png');
+}
+
+.hero-section {
+    padding: min(10vh, 8rem) 5vw;
+    padding-top: max(22vh, 18rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: max(8vh, 6rem);
+}
+.hero-section h2 {
+    font-size: 7rem;
+    font-family: 'Manrope';
+    font-weight: 200;
+    text-align: center;
+    color: #fff;
+}
+.hero-section h2 strong {
+    font-family: inherit;
+    font-weight: 700;
+}
+.hero-action-button {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.1rem 3rem;
+    border: 1px solid #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+.hero-action-button:before {
+    content: "";
+    position: absolute;
+    background: #49A1C7;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in;
+  }
+  
+.hero-action-button:hover:before {
+    top: 0;
+}
+.hero-action-button:hover {
+    border-color: transparent;
+}
+
+@media only screen and (max-width: 500px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/**challenge section*/
+.challenge-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: min(8rem, 12vh) 11vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: min(7vw, 8rem);
+}
+
+.challenge-section .left {
+    height: 40vh;
+    position: relative;
+}
+.challenge-section .left img {
+    position: absolute;
+    width: 60%;
+    border-radius: 10px;
+}
+.challenge-section .left img:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: rotate(-10deg);
+}
+.challenge-section .left img:nth-child(2) {
+    bottom: 0;
+    right: 0;
+    transform: rotate(10deg);
+}
+
+.challenge-section .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+.challenge-section .right h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #49A1C7;
+}
+.challenge-section .right h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+}
+.challenge-section .right p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #484848;
+    border-radius: 6px;
+    border-left: 6px solid #49A1C7;
+    padding-left: 2rem;
+}
+
+/*Challenge section responsive*/
+@media only screen and (max-width: 900px) {
+    .challenge-section .left {
+        height: 30vh;
+    }
+    .challenge-section {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+}
+@media only screen and (min-height: 650px) {
+    .challenge-section .left {
+        height: 30vh;
+    }
+    .challenge-section .left img {
+        width: 75%;
+    }
+}
+
+/**actions section*/
+.actions-section {
+    width: 100%;
+    padding: 5rem 11vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    background-color: #49A1C7;
+}
+.actions-section h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+.actions-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
+}
+.action-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+.action-image-holder {
+    aspect-ratio: 1/1;
+    width: 18rem;
+    height: auto;
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action-image-holder img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+.action-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.action-text h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+.action-text p {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 400;
+    color: #f0f0f0;
+}
+
+/*Actions section responsive*/
+@media only screen and (max-width: 1150px) {
+    .actions-section {
+        padding: 5rem 5vw;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .action-image-holder {
+        width: 12rem;
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .hero-section h2 {
+        font-size: 5.5rem;
+    }
+    .actions-section {
+        padding: 5rem 11vw;
+    }
+    .actions-section h2 {
+        font-size: 3.5rem;
+    }
+    .actions-grid {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .hero-section h2 {
+        font-size: 4.5rem;
+    }
+}
