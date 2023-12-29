@@ -1,0 +1,106 @@
+:root {
+    --colorPrimario: #fff;
+    --acento1: #49A1C7;
+    --acento2: #70C62C;
+    --acento3: #F9A01E;
+    --texto1: #f8fcff;
+    --texto2: #333;
+    --texto3: #fff5ac;
+}
+
+footer {
+    background-color: #333;
+    width: 100%;
+    padding: 5rem 11vw;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 4rem;
+}
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.footer-socials h3, .footer-contact h3 {
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 700;
+}
+.footer-socials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+}
+.footer-contact-link, .footer-social-link * {
+    transition: all 0.3s;
+}
+.footer-social-link:hover {
+    cursor: pointer;
+    filter: brightness(105%);
+}
+.footer-social-link:hover img {
+    transform: scale(1.1);
+}
+.footer-social-link:hover span {
+    font-size: 1.4rem;
+    transform: translateY(-0.5rem);
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+.footer-social-link img, .contact-icon img {
+    aspect-ratio: 1/1;
+    width: 3rem;
+    height: auto;
+}
+.footer-social-link span {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #868686;
+    text-decoration-thickness: 4px !important;
+    text-underline-offset: 1rem;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.footer-contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.footer-contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact-icon img {
+    opacity: 0.7;
+}
+.footer-contact-link .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-contact-link .contact-info span {
+    font-size: 1.3rem;
+    color: #868686;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 970px) {
+    footer {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+}

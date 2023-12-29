@@ -248,3 +248,130 @@ header {
         font-size: 4.5rem;
     }
 }
+
+
+/**impact section*/
+.impact-section {
+    padding: 5rem 11vw;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+.impact-section h2 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 700;
+    color: #000;
+}
+.impact-section .main-grid-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 1.5rem;
+}
+.impact-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.impact-container.top {
+    margin: 0;
+}
+.impact-container.middle {
+    margin: 0 auto;
+}
+.impact-container.bottom {
+    margin-left: auto;
+}
+.impact-card {
+    height: 100%;
+    padding: 3rem;
+    background-color: #f8fcff;
+    border-radius: 16px;
+    box-shadow: 1px 1px 4px 2px #f0f0f0;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.impact-card.visual {
+    padding: 4rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.impact-card.small {
+    width: 20vw;
+}
+.impact-card.medium {
+    width: 25vw;
+}
+.impact-card.large {
+    width: 35vw;
+}
+.impact-card .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.impact-card .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.impact-card h3 {
+    font-size: 5rem;
+    color: #49A1C7;
+    font-weight: 700;
+}
+.impact-card span {
+    font-size: 1.5rem;
+    color: #49A1C7;
+    font-family: 'Atma';
+    font-weight: 700;
+}
+.impact-card p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #484848;
+}
+@media only screen and (min-height: 800px) {
+    .impact-card.small {
+        width: 30vw;
+    }
+    .impact-card.medium {
+        width: 38vw;
+    }
+    .impact-card.large {
+        width: 45vw;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .impact-container {
+        flex-direction: column;
+    }
+    .impact-card.small, .impact-card.medium, .impact-card.large, .impact-card.visual  {
+        width: 90%;
+    }
+    .impact-container.top , .impact-container.middle, .impact-container.bottom {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .impact-card {
+        grid-template-columns: 1fr;
+    }
+    .impact-card p {
+        text-align: center;
+    }
+}
