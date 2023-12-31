@@ -13,8 +13,7 @@ header {
 }
 
 .hero-section {
-    padding: min(10vh, 8rem) 5vw;
-    padding-top: max(22vh, 18rem);
+    padding: 5rem 7vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -43,29 +42,18 @@ header {
     gap: 2rem;
     padding: 1.1rem 3rem;
     border: 1px solid #fff;
+    border-radius: 2000px;
     font-size: 1.6rem;
     font-weight: 500;
     text-decoration: none;
     color: #fff;
-    transition: all 0.3s;
-}
-.hero-action-button:before {
-    content: "";
-    position: absolute;
-    background: #49A1C7;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 100%;
-    z-index: -1;
-    -webkit-transition: top 0.09s ease-in;
-  }
-  
-.hero-action-button:hover:before {
-    top: 0;
+    transition: 0.3s ease-in-out;
 }
 .hero-action-button:hover {
-    border-color: transparent;
+    transform: scale(1.03);
+    color: white;
+    box-shadow:  inset 0 -4rem 4px #49a1c7, inset 0 0 0 transparent;
+    border-color: #49a1c7;
 }
 
 @media only screen and (max-width: 500px) {
@@ -344,6 +332,7 @@ header {
     font-weight: 400;
     color: #484848;
 }
+/*Impact section responsive*/
 @media only screen and (min-height: 800px) {
     .impact-card.small {
         width: 30vw;

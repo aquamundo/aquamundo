@@ -28,14 +28,16 @@ header {
 }
 
 .header-wrapper {
+    position: absolute;
     height: 100%;
     width: 100%;
     z-index: 1;
 }
 header nav {
     position: fixed;
+    z-index: 999;
     width: 100%;
-    padding: 1rem max(7vw, 5rem);
+    padding: 1rem 7vw;
     display: flex;
     align-items: center;
     gap: max(6vw, 5rem);
@@ -77,14 +79,15 @@ header nav img {
     font-size: 1.4rem;
     font-weight: 700;
     text-decoration: none;
-    text-decoration-color: #49A1C7;
+    -webkit-text-decoration-color: #49A1C7;
+            text-decoration-color: #49A1C7;
     color: #fff;
     transition: all 0.3s;
 }
 nav.scrolled .nav-links a {
     color: #000;
 }
-.nav-links a:hover, nav.scrolled .nav-links a:hover {
+.nav-links a:hover, nav.scrolled .nav-links a:hover, .nav-links a.active, nav.scrolled .nav-links a.active {
     color: #49A1C7;
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -112,7 +115,7 @@ nav.scrolled .nav-links a {
     box-shadow: 0px 0px 3px 8px rgba(255, 255, 255, 0.1);
     transition: all 0.5s;
     overflow: hidden;
-    z-index: 2;
+    z-index: 5;
 }
 .dropdown-content.visible {
     display: flex;

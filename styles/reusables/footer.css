@@ -34,6 +34,7 @@ footer {
     gap: 1.5rem;
 }
 .footer-social-link {
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 1.5rem;

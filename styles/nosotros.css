@@ -1,0 +1,277 @@
+:root {
+    --colorPrimario: #fff;
+    --acento1: #49A1C7;
+    --acento2: #70C62C;
+    --acento3: #F9A01E;
+    --texto1: #f8fcff;
+    --texto2: #333;
+    --texto3: #fff5ac;
+}
+
+header {
+    background-image: url('../res/nosotros/portada-nosotros.png');
+}
+
+.hero-section {
+    padding: 5rem 7vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: max(5vh, 3rem);
+}
+.hero-section h2, .hero-section h2 strong {
+    font-size: 7rem;
+    font-family: 'Manrope';
+    font-weight: 200;
+    color: #fff;
+}
+.hero-section h2 strong {
+    font-weight: 700;
+}
+.hero-section p {
+    max-width: min(600px, 90%);
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #f0f0f0;
+}
+.hero-action-button {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.1rem 3rem;
+    border: 1px solid #fff;
+    border-radius: 2000px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.hero-action-button:hover {
+    transform: scale(1.03);
+    box-shadow:  inset 0 -4rem 4px #49a1c7, inset 0 0 0 transparent;
+    border-color: #49a1c7;
+}
+
+/*aboutus section*/
+.aboutus-section {
+    padding: 5rem 7vw;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: max(5vw, 4rem);
+}
+.aboutus-section .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.aboutus-section .left h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #70C62C;
+}
+.aboutus-section .left h2 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.aboutus-section .left p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #484848;
+    border-radius: 6px;
+    border-left: 6px solid #70C62C;
+    padding-left: 2rem;
+}
+.aboutus-section .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutus-section .right img {
+    max-width: 90%;
+    max-height: 750px;
+    height: auto;
+}
+
+/*aboutus responsive*/
+@media only screen and (max-width: 1000px) {
+    .aboutus-section {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        min-height: -webkit-fit-content;
+        min-height: -moz-fit-content;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .aboutus-section .right img {
+        max-width: 100%;
+        max-height: 20rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .aboutus-section .left h3 {
+        font-size: 1.8rem;
+    }
+    .aboutus-section .left h2 {
+        font-size: 4rem;
+    }
+    .aboutus-section .left p {
+        font-size: 1.4rem;
+    }
+}
+
+/*missionvision section*/
+.missionvision-section {
+    width: 100%;
+    background-image: url('../res/nosotros/misionvision-nosotros.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.missionvision-text {
+    width: 100%;
+    height: 100%;
+    min-height: 70vh;
+    padding: min(15vh, 8rem) 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    -webkit-backdrop-filter: brightness(20%);
+            backdrop-filter: brightness(20%);
+}
+.missionvision-text p {
+    color: #f0f0f0;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+.missionvision-text p strong{
+    font-family: 'Manrope';
+    color: #49A1C7;
+    font-weight: 700;
+}
+.missionvision-text h3 {
+    font-size: 3.5rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+/*mission vision responsive*/
+@media only screen and (max-width: 460px) {
+    .missionvision-text {
+        min-height: 0;
+    }
+    .missionvision-text p {
+        font-size: 2.3rem !important;
+    }
+    .missionvision-text h3 {
+        font-size: 2.8rem !important;
+    }
+}
+
+/*Ods section*/
+.ods-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+.ods-section h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #000;
+}
+.ods-cards-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3vw;
+    row-gap: 3rem;
+}
+.ods-card {
+    max-width: 100%;
+    height: 100%;
+    border: 2px solid var(--ods-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ods-card img {
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+.ods-info {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ods-info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--ods-color);
+}
+.ods-info p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #484848;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 1300px) and (min-height: 800px) {
+    .ods-cards-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15vw;
+    }
+}
+@media only screen and (max-width: 1000px) and (max-height: 799px) {
+    .ods-cards-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15vw;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .ods-cards-container {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+    .ods-card {
+        margin: 0 auto;
+        max-width: min(250px, 90%);
+    }
+    .ods-info p {
+        font-size: 1.4rem;
+    }
+}
